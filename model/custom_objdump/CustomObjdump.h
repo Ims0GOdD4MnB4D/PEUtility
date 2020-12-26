@@ -94,15 +94,6 @@ void CustomObjdump::dontGiveAFuckAboutSingleResponsibility(const std::string& fi
         res += block;
     }
 
-    //export tables
-
-    input.seekg(rvaToOff(outFile.getOptionalHeader()
-                                 .DataDirectory[IMAGE_DIRECTORY_ENTRY_EXPORT]
-                                    .VirtualAddress));
-    size_t exportTableSize = outFile.getOptionalHeader()
-                                .DataDirectory[IMAGE_DIRECTORY_ENTRY_EXPORT]
-                                    .Size;
-
     input.close();
 }
 
