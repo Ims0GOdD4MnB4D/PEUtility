@@ -1,6 +1,6 @@
 #pragma once
 #include "DataDirectoryHeader.h"
-#include "DataDirectoryMacroses.h"
+#include "../macroses/DataDirectoryMacroses.h"
 
 
 typedef struct MY_IMAGE_OPTIONAL_HEADER {
@@ -59,7 +59,7 @@ typedef struct MY_IMAGE_OPTIONAL_HEADER {
     (относительно ImageBase, т. е. сколько байтов нужно отсчитать с адреса загрузки программы,
      чтобы попасть к началу секций) и размер какого-либо каталога (которые являются и секциями),
      которая определяется по её позиции в массиве.*/
-    MY_IMAGE_DATA_DIRECTORY DataDirectory[MY_IMAGE_NUMBEROF_DIRECTORY_ENTRIES];
+    MY_IMAGE_DATA_DIRECTORY DataDirectory[IMAGE_NUMBEROF_DIRECTORY_ENTRIES];
 } MY_IMAGE_OPTIONAL_HEADER32, *MY_PIMAGE_OPTIONAL_HEADER32;
 
 

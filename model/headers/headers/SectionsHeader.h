@@ -1,15 +1,9 @@
 #pragma once
 
-#include <winnls.h>
-
 typedef struct MY_IMAGE_SECTION_HEADER {
     /*Это поле, размером в 8 байт, содержит имя секции, в ASCII кодировке.*/
-    unsigned char Name[IMAGE_SIZEOF_SHORT_NAME];
-    union {
-        unsigned long PhysicalAddress;
-        /*Это четырёхбайтовое поле содержит размер (в байтах) секции (той самой комнаты) в виртуальной памяти.*/
-        unsigned long VirtualSize;
-    } Misc;
+    unsigned char Name[8]; // IMAGE_SIZEOF_SHORT_NAME
+    unsigned long PhysicalAddress;
     /*А это четырёхбайтовое поле уже содержит относительный адрес секции в виртуальной памяти.*/
     unsigned long VirtualAddress;
     /*Данное четырёхбайтовое поле содержит размер секции в файле.*/

@@ -7,7 +7,7 @@ typedef struct MY_IMAGE_FILE_HEADER {
     что программа может выполняться на процессорах Intel Itanium (Intel x64).
     3. IMAGE_FILE_MACHINE_AMD64 (0x8664) - означает, что программа может выполняться на процессорах AMD64 (x64).*/
     unsigned short  Machine; // Архитектура процессора
-    /*Двухбайтовоеполе NumberOfSections содержит в себе число секций (комнат) в PE-файле.*/
+    /*Двухбайтовоеполе NumberOfSections содержит в себе число секций в PE-файле.*/
     unsigned short  NumberOfSections; // Кол-во секций
     unsigned long TimeDateStamp; // Дата и время создания программы
     unsigned long PointerToSymbolTable; // Указатель на таблицу символов
