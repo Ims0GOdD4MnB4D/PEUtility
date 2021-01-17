@@ -1,3 +1,7 @@
+/**
+* Warning: this code was written whatever works, so it hard-to-read
+*/
+
 #define _BSD_SOURCE
 #include <arpa/inet.h>
 #include <iostream>
