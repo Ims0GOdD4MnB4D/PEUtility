@@ -5,7 +5,6 @@
 #define ALIGN_UP(x, align)    ((x & (align-1))?ALIGN_DOWN(x,align)+align:x)
 int sectionAligment;
 class CustomObjdump {
-    //TODO: make field private
 private:
     ExeFile outFile;
 public:
